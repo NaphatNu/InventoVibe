@@ -1,7 +1,7 @@
 function Edit(){
     return (
         <div>
-            edit page
+            Edit page
         </div>
     )
 }

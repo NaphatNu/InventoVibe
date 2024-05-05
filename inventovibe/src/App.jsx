@@ -1,5 +1,5 @@
 import React from 'react';
-import '/src/App.css'; // นำเข้าไฟล์ CSS
+import './App.css'; // นำเข้าไฟล์ CSS
 
 function App() {
   return (

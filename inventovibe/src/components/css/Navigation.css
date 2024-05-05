@@ -1,0 +1,47 @@
+.navigation-container {
+    height: 150px;
+    /* background-color: lightgray; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+}
+
+.Logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Logo-img {
+    height: 120px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button {
+    height: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #C7B69F;
+    color: white;
+    border: none;
+    font-size: 25px;
+    font-family: Jaldi;
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

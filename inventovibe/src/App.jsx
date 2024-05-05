@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>InventoVibe</h1>
+      <h1>InventoVibe test</h1>
     </>
   )
 }

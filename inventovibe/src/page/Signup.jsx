@@ -8,7 +8,7 @@ function SignUp() {
     <div className="body">
       <div className="signup-container">
       <div className="signup-logo-container">
-            <img src="./logo_InventoVibe.PNG" alt="Logo" />
+            <img src="./logo_InventoVibe2.PNG" alt="Logo" />
           </div>
         <div className="signup-signup-container">
           <form className="signup-form">
@@ -16,21 +16,21 @@ function SignUp() {
             <h2 className="signup-title">Sign Up</h2>
             <div className="signup-form-group">
               <label htmlFor="username">Name</label>
-              <input type="text" id="Name" className="form-control" />
+              <input type="text" id="Name" className="signup-form-control" />
             </div>
             <div className="signup-form-group">
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" className="form-control" />
+              <input type="email" id="email" className="signup-form-control" />
             </div>
             <div className="signup-form-group">
               <label htmlFor="tel">Tel.</label>
-              <input type="number" id="tel" className="form-control" />
+              <input type="number" id="tel" className="signup-form-control" />
             </div>
             <div className="signup-form-group">
               <label htmlFor="password">Password</label>
-              <input type="password" id="password" className="form-control" />
+              <input type="password" id="password" className="signup-form-control" />
             </div>
-            <button type="submit" className="btn">Sign Up</button>
+            <button type="submit" className="signup-btn">Sign Up</button>
           </form>
         </div>
       </div>

@@ -20,7 +20,7 @@ function Login() {
       <div className="container">
         <div className="body">
           <div className="logo-container">
-            <img src="./logo_InventoVibe.PNG" alt="Logo" />
+            <img src="./logo_InventoVibe2.PNG" alt="Logo" />
           </div>
           <div className="login-container">
             <form className="login-form">

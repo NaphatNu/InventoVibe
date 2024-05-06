@@ -16,13 +16,13 @@ function Login() {
   }
   else {
     return (
-      <>
-      <div className="body">
-        <div className="container">
+      
+      <div className="container">
+        <div className="body">
+          <div className="logo-container">
+            <img src="./logo_InventoVibe2.PNG" alt="Logo" />
+          </div>
           <div className="login-container">
-            <div className="logo-container">
-              <img src="./logo_InventoVibe.PNG" alt="Logo" />
-            </div>
             <form className="login-form">
               <h2 className="login-title">Login</h2>
               <div className="form-group">
@@ -36,12 +36,13 @@ function Login() {
               <button type="submit" className="btn" onClick={checkLogin}>Login</button>
             </form>
           </div>
+          <div className="signup-link">
+    <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+  </div>
         </div>
-        <div className="signup-link">
-          <Link to="/signup">Sign Up</Link>
-        </div>
-      </div>
-      </>
+  
+</div>
+
     );
   }
 

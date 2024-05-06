@@ -7,11 +7,14 @@ function List({itemData}) {
         <div className='list'>
             <div className='item-description'>
                 <div className='description-main'>
-                    <div className='item-id'>Format : {itemData.salesFormat}</div>
-                    <div className='item-name'>{itemData.productName}</div>
+                    <div className='item-id'>{itemData.productName}</div>
+                    <div className='item-name'>date : {itemData.date} {itemData.time}</div>
                 </div>
                 <div className='description-sub'>
-                Channel : {itemData.salesChannel} date : {itemData.date} {itemData.time} 
+                Format : {itemData.salesFormat}
+                </div>
+                <div className='description-sub'>
+                Channel : {itemData.salesChannel}  
                 </div>
             </div>
             <div className='item-amount'>

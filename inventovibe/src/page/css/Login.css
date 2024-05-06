@@ -1,10 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #E3D7BF;
-  }
-  
+
   .container {
     display: flex;
     justify-content: center;
@@ -66,17 +60,25 @@ body {
   .btn:hover {
     background-color: #555555;
   }
+ 
   .logo-container {
-    position: relative;
-    top: 50px;
+    position: fixed;
+    top: 1px; /* ปรับตำแหน่งให้อยู่ด้านบนของหน้าเว็บ */
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    transform: translateX(-50%);
+    z-index: 1; /* ให้โลโก้อยู่ด้านหน้า */
   }
   
   .logo-container img {
-    width: 100px;
-    height: auto;
+    width: 80px; /* ปรับขนาดรูปโลโก้ให้เล็กลง */
   }
+
+  .signup-link {
+    text-align: center;
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+  }
+  
+  
+  
   
   

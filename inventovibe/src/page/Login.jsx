@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import { Navigate } from "react-router-dom";
 import './css/Login.css';
-import SignUp from "./Signup";
-import App from '../App.jsx'
 
 function Login() {
   const [isLoggedIn, setIsLoggenIn] = useState(false);

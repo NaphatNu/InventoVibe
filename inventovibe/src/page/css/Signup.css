@@ -32,7 +32,6 @@
     flex: 1;
   }
   .signup-label {
-    
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
@@ -40,7 +39,7 @@
   
   .signup-form-control {
     text-align: right; /* ชิดข้อความทางขวา */
-    width: 80%; /* ปรับความกว้างของช่องข้อมูล */
+    width: 50%; /* ปรับความกว้างของช่องข้อมูล */
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 5px;

@@ -7,9 +7,9 @@ function Navigation() {
         <div className="navigation-container">
             <NavLink to="/home" className="Logo-container"><img className="Logo-img" src={img} alt="" /></NavLink>
             <div className="navbar">
+                <NavLink to="/home" className="button">Stockpile</NavLink>   
                 <NavLink to="/History" className="button">History</NavLink>
                 <NavLink to="/Edit" className="button">Edit</NavLink>
-                <NavLink to="/Permission" className="button">Permission</NavLink>
             </div>
         </div>
     );

@@ -1,6 +1,5 @@
 .navigation-container {
     height:20vh;
-    /* background-color: lightgray; */
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -13,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 30%;
 }
 
 .Logo-img {
@@ -31,14 +31,12 @@
 }
 
 .button {
-    height: 70px;
-    padding-left: 50px;
-    padding-right: 50px;
+    height: 80px;
+    width: 200px;
     background-color: #C7B69F;
     color: white;
-    border: none;
+    border: 2px solid #AB9680;
     font-size: 25px;
-    font-family: Jaldi;
     text-decoration: none; /* Remove underline */
     display: flex;
     justify-content: center;

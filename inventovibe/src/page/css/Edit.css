@@ -1,4 +1,11 @@
-/* Edit.css */
+* {
+  font-family: "Prompt", sans-serif;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 16px;
+}
   
   /* Form input group styles */
   .input-group {
@@ -36,11 +43,20 @@
   }
   /* Edit.css */
 
-/* Edit.css */
+.div-container {
+  max-width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ffffff; /* เปลี่ยนสีเป็นสีขาว */
+  border-radius: 10px; /* เพิ่มการปัดมุม */
+  background-color: #f9f9f9; /* เปลี่ยนสีพื้นหลัง */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+  position: relative; /* ตำแหน่งเป็น relative เพื่อให้สามารถกำหนดตำแหน่งปุ่มได้ */
+}
 
 /* Form container styles */
 .form-container {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ffffff; /* เปลี่ยนสีเป็นสีขาว */

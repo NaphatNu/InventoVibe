@@ -58,23 +58,23 @@ function SignUp() {
             
             <h2 className="signup-title">Sign Up</h2>
             <div className="signup-form-group">
-              <label htmlFor="username">Name</label>
+              <label htmlFor="username" className='signup-label'>Name</label>
               <input type="text" id="Name" className="signup-form-control" 
               value={Name} onChange={(e) => setName(e.target.value)} />
 
             </div>
             <div className="signup-form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" className='signup-label'>Email</label>
               <input type="email" id="email" className="signup-form-control"
               value={Email} onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="signup-form-group">
-              <label htmlFor="tel">Tel.</label>
+              <label htmlFor="tel" className='signup-label'>Tel.</label>
               <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" className="signup-form-control"
               value={Tel} onChange={(e) => setTel(e.target.value)} />
             </div>
             <div className="signup-form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" className='signup-label'>Password</label>
               <input type="password" id="password" className="signup-form-control"
               value={Password} onChange={(e) => setPassword(e.target.value)} />
             </div>

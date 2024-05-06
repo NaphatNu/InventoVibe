@@ -6,7 +6,7 @@ function Edit(){
     return (
         <>
         <Navigation/>
-        <div className="form-container">
+        <div className="div-container">
             <ProductEditForm />
         </div>
         </>

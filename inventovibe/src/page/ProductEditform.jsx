@@ -6,7 +6,7 @@ function ProductEditForm() {
 
   const ColumnList = ['ถุงซิป', 'แคป', 'ถุงแก้ว', 'pof', 'PVC'];
 
-  const [category, setCategory] = useState('ถุงซิป');
+  const [category, setCategory] = useState('');
   const [productName, setProductName] = useState('');
   const [productCode, setProductCode] = useState('');
   const [quantity, setQuantity] = useState(0);
@@ -67,7 +67,7 @@ function ProductEditForm() {
   return (
     <form onSubmit={handleSubmit} className="form-container">
       <div className="input-group">
-        <label>หมวดหมู่สินค้า:</label>
+        <label className='label'>หมวดหมู่สินค้า:</label>
 
         <select value={category} onChange={async (e) => {
           setCategory(e.target.value);
@@ -90,7 +90,7 @@ function ProductEditForm() {
 
       </div>
       <div className="input-group">
-        <label>ชื่อสินค้า:</label>
+        <label className='label'>ชื่อสินค้า:</label>
 
         <select value={productName} onChange={(e) => setProductName(e.target.value)}>
         <option value="">Select an option</option>
@@ -104,11 +104,11 @@ function ProductEditForm() {
       </div>
 
       <div className="input-group">
-        <label>จำนวน:</label>
+        <label className='label'>จำนวน:</label>
         <input type="number" value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} />
       </div>
       <div className="input-group">
-        <label>ช่องทางการซื้อขาย:</label>
+        <label className='label'>ช่องทางการซื้อขาย:</label>
         <select value={salesChannel} onChange={(e) => setSalesChannel(e.target.value)}>
           <option value="">โปรดเลือก</option>
           <option value="Point of sale ">ขายหน้าร้าน</option>
@@ -117,7 +117,7 @@ function ProductEditForm() {
         </select>
       </div>
       <div className="input-group">
-        <label>รูปแบบการซื้อขาย:</label>
+        <label className='label'>รูปแบบการซื้อขาย:</label>
         <select value={salesFormat} onChange={(e) => setSalesFormat(e.target.value)}>
           <option value="">โปรดเลือก</option>
           <option value="Buy">ซื้อ</option>
@@ -125,11 +125,11 @@ function ProductEditForm() {
         </select>
       </div>
       <div className="input-group">
-        <label>วันที่:</label>
+        <label className='label'>วันที่:</label>
         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
       </div>
       <div className="input-group">
-        <label>เวลา:</label>
+        <label className='label'>เวลา:</label>
         <input type="time" value={time} onChange={(e) => setTime(e.target.value)} />
       </div>
       

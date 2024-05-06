@@ -6,14 +6,18 @@ import Edit from "./page/Edit";
 import History from "./page/History";
 import Permission from "./page/Permission";
 import Navigation from "./components/Navigation";
+import SignUp from "./page/Signup";
+import Login from "./page/Login";
+
 
 
 export default function App() {
   return (
     <>
-    <Navigation/>
     <Routes>
-      <Route path="/" element={< Home />}/>
+      <Route path="/" element={< Login />}/>
+      <Route path="home" element={< Home />}/>
+      <Route path="signup" element={< SignUp />}/>
       <Route path="history" element={< History />}/>
       <Route path="edit" element={< Edit />}/>
       <Route path="permission" element={< Permission />}/>

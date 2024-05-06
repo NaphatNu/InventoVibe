@@ -8,7 +8,6 @@ function Edit(){
         <Navigation/>
         <div className="form-container">
             <ProductEditForm />
-            <button type="submit" className="submit-button">บันทึกการแก้ไข</button>
         </div>
         </>
     )

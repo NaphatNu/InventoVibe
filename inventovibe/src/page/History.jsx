@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './css/home.css';
-import List from '../components/list';
-import { getAllItems } from '../api/crud';
+import List from '../components/list_history';
+import { getAllItemByValue } from '../api/crud';
 import Navigation from '../components/Navigation';
 
 function History() {
@@ -18,7 +18,7 @@ function History() {
         // Function to fetch data from the API
         const fetchData = async () => {
             try {
-                const response = await getAllItems(currentCategory);
+                const response = await getAllItemByValue(currentCategory);
                 setData(response);
             } catch (error) {
                 console.error('Error fetching data:', error);

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './css/home.css';
-import List from '../components/list';
+import List from '../components/list_home';
 import { getAllItems } from '../api/crud';
 import Navigation from '../components/Navigation';
 

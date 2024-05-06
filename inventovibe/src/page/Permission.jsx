@@ -11,7 +11,8 @@ function PermissionForm({ username }) {
   };
 
   return (
-    <div>
+    <>
+    <Navigation/>
     <div className="permission-container"> 
       <h2 className="permission-title">Permission</h2>
       <form className="permission-form" onSubmit={handleSubmit}>
@@ -35,7 +36,6 @@ function PermissionForm({ username }) {
       
     </div>
     <input className="permission-submit" type="submit" value="ยืนยัน" />
-    </div>
     </>
   );
 }

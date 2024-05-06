@@ -3,15 +3,17 @@ import axios from 'axios';
 const API_BASE_URL = 'https://sheet.best/api/sheets/5549f250-fd34-4bc7-8d8b-c8d015051808';
 
 // Create (Post)
-const createItem = async (itemData) => {
+const createItem = async (sheet,itemData) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}`, itemData);
+    const response = await axios.post(`${API_BASE_URL}/tabs/${sheet}`, itemData);
     return response.data;
   } catch (error) {
     console.error('Error creating item:', error);
     throw error;
   }
 };
+
+
 
 // Read (Get)
 const getAllItems = async (sheet) => {

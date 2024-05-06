@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // นำเข้าคอมโพเนนต์ Link จาก react-router-dom
-import './signup.css'; // นำเข้าไฟล์ CSS
+import './css/signup.css'; // นำเข้าไฟล์ CSS
 
 function SignUp() {
   return (

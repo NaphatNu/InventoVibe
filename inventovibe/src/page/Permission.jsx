@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Permission.css'; // import CSS file
+import './css/Permission.css'; // import CSS file
 
 function PermissionForm({ username }) {
   const [role, setRole] = useState('');

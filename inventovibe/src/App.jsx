@@ -1,16 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter,Routes, Route } from "react-router-dom";
+import './App.css';
+import Home from "./page/home";
+import Edit from "./page/Edit";
+import History from "./page/History";
+import Permission from "./page/Permission";
+import Navigation from "./components/Navigation";
 
-function App() {
-  const [count, setCount] = useState(0)
 
+export default function App() {
   return (
     <>
-      <h1>InventoVibe</h1>
+    <BrowserRouter>
+      <Navigation/>
+        <Routes>
+          <Route path="/" element={< Home />}/>
+          <Route path="history" element={< History />}/>
+          <Route path="edit" element={< Edit />}/>
+          <Route path="permission" element={< Permission />}/>
+        </Routes>
+    </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

@@ -1,69 +1,67 @@
-import { useState, useEffect } from 'react'
-import axios from "axios";
-import './css/home.css'
+import { useState, useEffect } from 'react';
+import './css/home.css';
 import List from '../components/list';
+import { getAllItems } from '../api/crud';
 
-// const API_BASE_URL = 'https://sheet.best/api/sheets/27c535b6-cbed-4732-8f24-332f893ae770';
 function Home() {
-    
-    // State to hold the data fetched from the API
+    const ColumnList = ['ถุงซิป', 'แคป', 'ถุงแก้ว', 'pof', 'PVC'];
+    const [currentCategory, setCurrentCategory] = useState('ถุงซิป');
     const [data, setData] = useState([]);
-  
+
+    // Function to handle category click
+    const handleClick = (category) => {
+        setCurrentCategory(category);
+    };
+
     // Function to fetch data from the API
     const fetchData = async () => {
-      try {
-        const response = await fetch('https://sheet.best/api/sheets/27c535b6-cbed-4732-8f24-332f893ae770');
-        const jsonData = await response.json();
-        setData(jsonData);
-        
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+        try {
+            const response = await getAllItems(currentCategory);
+            setData(response);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
     };
-  
-    // Fetch data initially when the component mounts
+
+    // Fetch data initially and whenever the current category changes
     useEffect(() => {
-      fetchData();
-    }, []); // Empty dependency array means this effect runs only once, when the component mounts
-  
-    // You can use useEffect again to refetch data whenever it changes, if necessary
-    console.log(data);
+        fetchData();
+
+        // Reload data every 5 seconds
+        // const intervalId = setInterval(fetchData, 5000);
+
+
+        // return () => clearInterval(intervalId);
+
+    }, [currentCategory]);
+
     return (
-        <>
         <div className='home-container'>
             <div className='home-nav'>
-                <div className='home-category'>name1</div>
-                <div className='home-category'>name2</div>
-                <div className='home-category'>name3</div>
-                <div className='home-category'>name1</div>
-                <div className='home-category'>name2</div>
-                <div className='home-category'>name3</div>
+                {ColumnList.map((item) => (
+                    <div
+                        key={item}
+                        className={`home-category ${currentCategory === item ? 'click' : ''}`}
+                        onClick={() => handleClick(item)}>
+                        {item}
+                    </div>
+                ))}
             </div>
             <div className='home-content-container'>
                 <div className='home-content-list'>
                     <div className='search-container'>
-                        <input type="text" className='searchbar'/>
+                        <input type='text' className='searchbar' />
                     </div>
                     <div className='item-list'>
-                        {data.map(item => (
-                            <List key={item.id} itemData ={item}/>
+                        {/* Render list items */}
+                        {data.map((item) => (
+                            <List key={item.id} itemData={item} />
                         ))}
                     </div>
-                    
                 </div>
             </div>
-      </div>
-        </>
-
+        </div>
     );
-  };
+}
 
 export default Home;
-
-/*
-<ul>
-{data.map(item => (
-  <li key={item.id}>{item.Name}</li>
-))}
-</ul>
-*/

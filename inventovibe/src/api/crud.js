@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://sheet.best/api/sheets/27c535b6-cbed-4732-8f24-332f893ae770';
+const API_BASE_URL = 'https://sheet.best/api/sheets/5549f250-fd34-4bc7-8d8b-c8d015051808';
 
 // Create (Post)
 const createItem = async (itemData) => {
@@ -14,9 +14,9 @@ const createItem = async (itemData) => {
 };
 
 // Read (Get)
-const getAllItems = async () => {
+const getAllItems = async (sheet) => {
   try {
-    const response = await axios.get(`${API_BASE_URL}`);
+    const response = await axios.get(`${API_BASE_URL}/tabs/${sheet}`);
     return response.data;
   } catch (error) {
     console.error('Error getting all items:', error);
@@ -55,5 +55,6 @@ const deleteItem = async (itemId) => {
     throw error;
   }
 };
+
 
 export { createItem, getAllItems, getItemById, updateItem, deleteItem };

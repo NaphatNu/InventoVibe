@@ -7,16 +7,16 @@ function List({itemData}) {
         <div className='list'>
             <div className='item-description'>
                 <div className='description-main'>
-                    <div className='item-id'>{itemData.id}</div>
-                    <div className='item-name'>{itemData.Name}</div>
+                    <div className='item-id'>ID : {itemData.ชนิดฟิล์ม}</div>
+                    <div className='item-name'>{itemData.รายละเอียดสินค้า}</div>
                 </div>
                 <div className='description-sub'>
-                    รายละเอียดสินค้า
+                    จำนวนชิ้น/กก. : {itemData.จำนวนชิ้น} ราคาขาย : {itemData.ราคาขาย} บาท
                 </div>
             </div>
             <div className='item-amount'>
-                <div className='amount'>00</div>
-                <div className='unit'>unit</div>
+                <div className='amount'>{itemData.stock}</div>
+                <div className='unit'>กก.</div>
             </div>
             <div className='item-edit'>edit</div>
         </div>

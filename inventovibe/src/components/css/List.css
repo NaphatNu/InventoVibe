@@ -1,0 +1,43 @@
+
+.list {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+
+}
+
+.item-description {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:first baseline;
+    margin-left: 100px;
+}
+
+.item-amount {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-edit {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.description-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-id {
+    margin-right: 20px;
+}

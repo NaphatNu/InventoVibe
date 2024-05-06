@@ -27,12 +27,6 @@ function Home() {
     useEffect(() => {
         fetchData();
 
-        // Reload data every 5 seconds
-        // const intervalId = setInterval(fetchData, 5000);
-
-
-        // return () => clearInterval(intervalId);
-
     }, [currentCategory]);
 
     return (
@@ -49,11 +43,7 @@ function Home() {
             </div>
             <div className='home-content-container'>
                 <div className='home-content-list'>
-                    <div className='search-container'>
-                        <input type='text' className='searchbar' />
-                    </div>
                     <div className='item-list'>
-                        {/* Render list items */}
                         {data.map((item) => (
                             <List key={item.id} itemData={item} />
                         ))}

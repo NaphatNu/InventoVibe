@@ -15,10 +15,8 @@ function List({itemData}) {
                 </div>
             </div>
             <div className='item-amount'>
-                <div className='amount'>{itemData.stock}</div>
-                <div className='unit'>กก.</div>
+                <div className='amount'>{itemData.stock} kg. </div>
             </div>
-            <div className='item-edit'>edit</div>
         </div>
         </>
     );

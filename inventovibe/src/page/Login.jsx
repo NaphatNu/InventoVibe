@@ -1,33 +1,52 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // นำเข้าคอมโพเนนต์ Link จาก react-router-dom
-import './css/login.css'; // นำเข้าไฟล์ CSS
 
-function App() {
-  return (
-    <div className="App">
-      <div className="logo-container">
-        <img src="/public/logo_InventoVibe.PNG" alt="Logo" />
-      </div>
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; 
+import { Navigate } from "react-router-dom";
+import './css/Login.css';
+
+function Login() {
+  const [isLoggedIn, setIsLoggenIn] = useState(false);
+
+  function checkLogin() {
+    setIsLoggenIn(true);
+  }
+
+  if(isLoggedIn){
+    return <Navigate to="/home"/>;
+  }
+  else {
+    return (
       
       <div className="container">
-        <div className="login-container">
-          <form className="login-form">
-            <h2 className="login-title">Login</h2>
-            <div className="form-group">
-              <label htmlFor="username">Username</label>
-              <input type="text" id="username" name="username" className="form-control" placeholder="Enter your username" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input type="password" id="password" name="password" className="form-control" placeholder="Enter your password" />
-            </div>
-            <button type="submit" className="btn">Login</button>
-          </form>
-          <p>Don't have an account? <Link to="/signup">Sign up</Link></p> {/* เพิ่มลิงค์ไปหน้า signup */}
+        <div className="body">
+          <div className="logo-container">
+            <img src="./logo_InventoVibe2.PNG" alt="Logo" />
+          </div>
+          <div className="login-container">
+            <form className="login-form">
+              <h2 className="login-title">Login</h2>
+              <div className="form-group">
+                <label htmlFor="username">Username</label>
+                <input type="text" id="username" className="form-control" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input type="password" id="password" className="form-control" />
+              </div>
+              <button type="submit" className="btn" onClick={checkLogin}>Login</button>
+            </form>
+          </div>
+          <div className="signup-link">
+    <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+  </div>
         </div>
-      </div>
-    </div>
-  );
+  
+</div>
+
+    );
+  }
+
+
 }
 
-export default App;
+export default Login;

@@ -24,7 +24,7 @@
     text-align: right;
   }
   
-  .input-group input, 
+  
   .input-group select {
     flex: 1; /* ทำให้ input เต็มพื้นที่ที่เหลือ */
     padding: 12px;

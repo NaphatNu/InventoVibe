@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: scroll;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     scrollbar-color: #E3D7BF #E3D7BF;
 
 }

@@ -5,7 +5,6 @@ import Home from "./page/home";
 import Edit from "./page/Edit";
 import History from "./page/History";
 import Permission from "./page/Permission";
-import Navigation from "./components/Navigation";
 import SignUp from "./page/Signup";
 import Login from "./page/Login";
 
@@ -14,6 +13,7 @@ import Login from "./page/Login";
 export default function App() {
   return (
     <>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={< Login />}/>
       <Route path="home" element={< Home />}/>
@@ -22,6 +22,7 @@ export default function App() {
       <Route path="edit" element={< Edit />}/>
       <Route path="permission" element={< Permission />}/>
     </Routes>
+    </BrowserRouter>
     </>
   );
 }

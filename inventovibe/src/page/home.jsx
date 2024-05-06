@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './css/home.css';
 import List from '../components/list';
 import { getAllItems } from '../api/crud';
+import Navigation from '../components/Navigation';
 
 function Home() {
     const ColumnList = ['ถุงซิป', 'แคป', 'ถุงแก้ว', 'pof', 'PVC'];
@@ -30,6 +31,8 @@ function Home() {
     }, [currentCategory]);
 
     return (
+        <>
+        <Navigation/>
         <div className='home-container'>
             <div className='home-nav'>
                 {ColumnList.map((item) => (
@@ -51,6 +54,7 @@ function Home() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 

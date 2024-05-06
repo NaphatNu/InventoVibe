@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Permission.css'; // import CSS file
+import './css/Permission.css'; // import CSS file
+import Navigation from '../components/Navigation';
 
 function PermissionForm({ username }) {
   const [role, setRole] = useState('');
@@ -10,6 +11,8 @@ function PermissionForm({ username }) {
   };
 
   return (
+    <>
+    <Navigation/>
     <div className="permission-container"> {/* Add class for container */}
       <h2 className="permission-title">Permission</h2>
       <form className="permission-form" onSubmit={handleSubmit}>
@@ -84,6 +87,7 @@ function PermissionForm({ username }) {
       </form>
       <input className="permission-submit" type="submit" value="ยืนยัน" />
     </div>
+    </>
   );
 }
 

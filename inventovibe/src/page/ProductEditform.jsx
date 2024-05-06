@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Edit.css'; 
+import './css/Edit.css'; 
 
 function ProductEditForm() {
   const [category, setCategory] = useState('');

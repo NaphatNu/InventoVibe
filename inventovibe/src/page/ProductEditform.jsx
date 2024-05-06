@@ -1,12 +1,8 @@
-import React, { useState,useEffect } from 'react';
-import './css/Edit.css'; 
-import { createItem, getAllItems } from '../api/crud';
+import React, { useState } from 'react';
+import './Edit.css'; 
 
 function ProductEditForm() {
-
-  const ColumnList = ['ถุงซิป', 'แคป', 'ถุงแก้ว', 'pof', 'PVC'];
-
-  const [category, setCategory] = useState('ถุงซิป');
+  const [category, setCategory] = useState('');
   const [productName, setProductName] = useState('');
   const [productCode, setProductCode] = useState('');
   const [quantity, setQuantity] = useState(0);
@@ -15,94 +11,41 @@ function ProductEditForm() {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
 
-  const [data, setData] = useState([]);
-
-  const userData = {
-    category,
-    productName,
-    productCode,
-    quantity,
-    salesChannel,
-    salesFormat,
-    date,
-    time
-  }
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    const res = createItem('History',userData);
-    console.log('submit : ', res);
-
-
-    setCategory('');
-    setProductName('');
-    setProductCode('');
-    setQuantity('');
-    setSalesChannel('');
-    setSalesFormat('');
-    setDate('');
-    setTime('');
     
-    console.log('ส่งข้อมูลไปยัง API:', userData);
+    console.log('ส่งข้อมูลไปยัง API:', {
+      category,
+      productName,
+      productCode,
+      quantity,
+      salesChannel,
+      salesFormat,
+      date,
+      time
+    });
+    
   };
 
-    const fetchData = async () => {
-        try {
-            const response = await getAllItems(category);
-            console.log(response)
-            setData(response);
-            console.log(category)
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
-
-    useEffect(() => {
-        fetchData();
-    }, []);
-
-    const [NameList, setNameList] = useState([]);
-    
-    
   return (
     <form onSubmit={handleSubmit} className="form-container">
       <div className="input-group">
         <label>หมวดหมู่สินค้า:</label>
-
-        <select value={category} onChange={async (e) => {
-          setCategory(e.target.value);
-          try {
-            const response = await getAllItems(e.target.value);
-            const nameList = response.map(item => item.รายละเอียดสินค้า);
-            setNameList(nameList); // Update NameList using setNameList
-            console.log(NameList);
-          } catch (error) {
-            console.error('Error fetching data:', error);
-          }
-          } }>
-        <option value="">Select an option</option>
-        {ColumnList.map((option, index) => (
-          <option key={index} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="">โปรดเลือก</option>
+          <option value="category1">หมวดหมู่ 1</option>
+          <option value="category2">หมวดหมู่ 2</option>
+          <option value="category3">หมวดหมู่ 3</option>
+        </select>
       </div>
       <div className="input-group">
         <label>ชื่อสินค้า:</label>
-
-        <select value={productName} onChange={(e) => setProductName(e.target.value)}>
-        <option value="">Select an option</option>
-        {NameList.map((option, index) => (
-          <option key={index} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-
+        <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)} />
       </div>
-
+      <div className="input-group">
+        <label>รหัสสินค้า:</label>
+        <input type="text" value={productCode} onChange={(e) => setProductCode(e.target.value)} />
+      </div>
       <div className="input-group">
         <label>จำนวน:</label>
         <input type="number" value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} />
@@ -111,17 +54,16 @@ function ProductEditForm() {
         <label>ช่องทางการซื้อขาย:</label>
         <select value={salesChannel} onChange={(e) => setSalesChannel(e.target.value)}>
           <option value="">โปรดเลือก</option>
-          <option value="Point of sale ">ขายหน้าร้าน</option>
-          <option value="LineOfficial">LineOfficial</option>
-          <option value="Shopee">Shopee</option>
+          <option value="online">ออนไลน์</option>
+          <option value="offline">ออฟไลน์</option>
         </select>
       </div>
       <div className="input-group">
         <label>รูปแบบการซื้อขาย:</label>
         <select value={salesFormat} onChange={(e) => setSalesFormat(e.target.value)}>
           <option value="">โปรดเลือก</option>
-          <option value="Buy">ซื้อ</option>
-          <option value="sale">ขาย</option>
+          <option value="retail">ขายปลีก</option>
+          <option value="wholesale">ขายส่ง</option>
         </select>
       </div>
       <div className="input-group">
@@ -133,7 +75,6 @@ function ProductEditForm() {
         <input type="time" value={time} onChange={(e) => setTime(e.target.value)} />
       </div>
       
-      <button type="submit" className="submit-button">บันทึกการแก้ไข</button>
     </form>
   );
 }

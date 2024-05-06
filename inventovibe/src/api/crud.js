@@ -23,6 +23,17 @@ const getAllItems = async (sheet) => {
     throw error;
   }
 };
+
+//
+const getAllItemByValue = async (sheet) => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/tabs/History/category/${sheet}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error getting all items:', error);
+    throw error;
+  }
+};
 // (Get by ID)
 const getItemById = async (itemId) => {
   try {
@@ -57,4 +68,4 @@ const deleteItem = async (itemId) => {
 };
 
 
-export { createItem, getAllItems, getItemById, updateItem, deleteItem };
+export { createItem, getAllItems, getItemById, updateItem, deleteItem ,getAllItemByValue};

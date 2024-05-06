@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './css/home.css';
 import List from '../components/list';
 import { getAllItems } from '../api/crud';
+import Navigation from '../components/Navigation';
 
 function History() {
 
@@ -31,6 +32,8 @@ function History() {
         }, [currentCategory]);
     
         return (
+            <>
+            <Navigation/>
             <div className='home-container'>
                 <div className='home-nav'>
                     {ColumnList.map((item) => (
@@ -52,6 +55,7 @@ function History() {
                     </div>
                 </div>
             </div>
+            </>
     );
 }
 

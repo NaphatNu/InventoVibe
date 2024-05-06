@@ -6,9 +6,8 @@ function ProductEditForm() {
 
   const ColumnList = ['ถุงซิป', 'แคป', 'ถุงแก้ว', 'pof', 'PVC'];
 
-  const [category, setCategory] = useState('ถุงซิป');
+  const [category, setCategory] = useState('');
   const [productName, setProductName] = useState('');
-  const [productCode, setProductCode] = useState('');
   const [quantity, setQuantity] = useState(0);
   const [salesChannel, setSalesChannel] = useState('');
   const [salesFormat, setSalesFormat] = useState('');
@@ -20,7 +19,6 @@ function ProductEditForm() {
   const userData = {
     category,
     productName,
-    productCode,
     quantity,
     salesChannel,
     salesFormat,
@@ -33,10 +31,8 @@ function ProductEditForm() {
     const res = createItem('History',userData);
     console.log('submit : ', res);
 
-
     setCategory('');
     setProductName('');
-    setProductCode('');
     setQuantity('');
     setSalesChannel('');
     setSalesFormat('');

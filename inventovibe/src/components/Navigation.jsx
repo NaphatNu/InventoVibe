@@ -55,7 +55,7 @@ function Navigation() {
           className={`button ${selectedBox === "Edit" ? "fill-color" : ""}`}
           onClick={() => handleClick("Edit")}
         >
-          Edit
+          Update
         </NavLink>
       </div>
     </div>

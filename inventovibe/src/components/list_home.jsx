@@ -7,7 +7,7 @@ function List({itemData}) {
         <div className='list'>
             <div className='item-description'>
                 <div className='description-main'>
-                    <div className='item-id'>ID : {itemData.ชนิดฟิล์ม}</div>
+                    <div className='item-id'>ID : [{itemData.ชนิดฟิล์ม}]</div>
                     <div className='item-name'>{itemData.รายละเอียดสินค้า}</div>
                 </div>
                 <div className='description-sub'>

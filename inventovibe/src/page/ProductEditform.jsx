@@ -111,7 +111,7 @@ function ProductEditForm() {
         <label className='label'>ช่องทางการซื้อขาย:</label>
         <select value={salesChannel} onChange={(e) => setSalesChannel(e.target.value)}>
           <option value="">โปรดเลือก</option>
-          <option value="Point of sale ">ขายหน้าร้าน</option>
+          <option value="Point of sale ">หน้าร้าน</option>
           <option value="LineOfficial">LineOfficial</option>
           <option value="Shopee">Shopee</option>
         </select>

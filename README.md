@@ -1,3 +1,4 @@
+#paste in terminal
 cd inventovibe
 
 #start in terminal
